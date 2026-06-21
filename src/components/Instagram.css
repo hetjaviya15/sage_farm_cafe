@@ -1,0 +1,114 @@
+.instagram {
+  background: var(--color-warm-gray);
+}
+
+.instagram__header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.instagram__header .section-title em {
+  color: var(--color-sage-dark);
+  font-style: italic;
+}
+
+.instagram__handle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-sage-dark);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-sage-dark);
+  transition: all var(--transition-mid);
+}
+
+.instagram__handle:hover {
+  background: var(--color-sage-dark);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Grid */
+.instagram__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+/* Items */
+.ig-item {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: block;
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.ig-item.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ig-item__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ig-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.ig-item:hover .ig-item__img {
+  transform: scale(1.1);
+}
+
+.ig-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 80, 22, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.ig-item:hover .ig-item__overlay {
+  opacity: 1;
+}
+
+/* CTA */
+.instagram__cta {
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .instagram__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

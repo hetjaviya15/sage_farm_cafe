@@ -1,0 +1,215 @@
+.contact {
+  background: var(--color-cream);
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.contact__header .section-title em {
+  color: var(--color-sage-dark);
+  font-style: italic;
+}
+
+.contact__header .section-subtitle {
+  max-width: 440px;
+}
+
+/* Grid */
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Info Column */
+.contact__info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact__card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-mid), box-shadow var(--transition-mid);
+}
+
+.contact__card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact__card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(74,124,63,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-sage-dark);
+  flex-shrink: 0;
+}
+
+.contact__card-title {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 0.35rem;
+}
+
+.contact__card-text {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--color-text-dark);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.contact__link {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-sage-dark);
+  transition: color var(--transition-fast);
+}
+
+.contact__link:hover {
+  color: var(--color-forest);
+}
+
+/* Hours */
+.contact__hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact__hours-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-mid);
+}
+
+.contact__hours-row span:last-child {
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+/* Action Buttons */
+.contact__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+
+.contact__action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-mid);
+}
+
+.contact__action-btn--call {
+  background: var(--color-sage-dark);
+  color: var(--color-white);
+}
+
+.contact__action-btn--call:hover {
+  background: var(--color-forest);
+  transform: translateY(-2px);
+}
+
+.contact__action-btn--whatsapp {
+  background: #25D366;
+  color: var(--color-white);
+}
+
+.contact__action-btn--whatsapp:hover {
+  background: #128C7E;
+  transform: translateY(-2px);
+}
+
+.contact__action-btn--maps {
+  background: var(--color-white);
+  color: var(--color-text-dark);
+  border: 1.5px solid var(--color-border);
+}
+
+.contact__action-btn--maps:hover {
+  background: var(--color-warm-gray);
+  transform: translateY(-2px);
+}
+
+/* Map Column */
+.contact__map-col {
+  position: sticky;
+  top: 100px;
+}
+
+.contact__map-frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.contact__map {
+  width: 100%;
+  height: 460px;
+  border: none;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact__map-col {
+    position: static;
+  }
+
+  .contact__map {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact__actions {
+    flex-direction: column;
+  }
+
+  .contact__action-btn {
+    justify-content: center;
+  }
+}
