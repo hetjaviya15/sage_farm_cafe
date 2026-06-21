@@ -134,7 +134,7 @@ export default function Footer() {
       <div className="footer__bottom">
         <div className="container">
           <p className="footer__bottom-text">
-            © {new Date().getFullYear()} Sage Farm Cafe. All rights reserved. | Crafted with ❤️ in Hyderabad
+            © {new Date().getFullYear()} Sage Farm Cafe. All rights reserved. | Crafted with ❤️ in Hyderabad by Het
           </p>
         </div>
       </div>
